@@ -4,8 +4,8 @@ require 'minitest/autorun'
 
 #
 # A simple solution using core String and Regexp features.
-#   by Dave
-#    see 
+#   by Dave Burt
+#    see https://rubytalk.org/t/ruby-quiz-is-back-challenge-1-read-comma-separated-values-csv-from-the-real-world/74802/2
 
 module Dave
 def parse( txt )
