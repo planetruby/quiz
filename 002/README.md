@@ -1,4 +1,4 @@
-# Ruby Quiz - Challenge #2 - Calculate the Bitcoin Genesis Block Hash
+# Ruby Quiz - Challenge #2 - Calculate the Bitcoin Genesis Block Hash (SHA-256)
 
 
 Let's calculate the classic bitcoin (crypto) block hash from scratch (zero).
