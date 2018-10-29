@@ -9,7 +9,9 @@ Ruby Quiz is a  fortnightly programming challenge for Ruby programmers. A new Ru
 
 
 
-## New to Ruby?
+
+
+### New to Ruby?
 
 Free recommended (online) books and exercises include:
 
