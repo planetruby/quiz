@@ -4,7 +4,7 @@ Ruby Quiz is a  fortnightly programming challenge for Ruby programmers. A new Ru
 
 
 - [Challenge #1 - Read Comma-Separated Values (CSV) from the "Real World"](001)
-
+- [Challenge #2 - Calculate the Bitcoin Genesis Block Hash](002)
 
 
 
