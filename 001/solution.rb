@@ -8,8 +8,8 @@ require 'minitest/autorun'
 #    see https://rubytalk.org/t/ruby-quiz-is-back-challenge-1-read-comma-separated-values-csv-from-the-real-world/74802/2
 
 module Dave
-def parse( txt )
-  txt.each_line.map do |line|
+def parse( text )
+  text.each_line.map do |line|
     next if line =~ /^#/ || line =~ /^\s+$/
     line.strip.split(/\s*,\s*/, -1).map do |field|
       field.sub(/^(['"])(.*)\1$/, '\\2')
@@ -18,18 +18,35 @@ def parse( txt )
 end
 end
 
+#
+# A entry using String and Regex
+#  by  Frank J. Cameron
+#    see https://rubytalk.org/t/re-ruby-quiz-is-back-challenge-1-read-comma-separated-values-csv-from-the-real-world/74809
 
+module Frank
+def parse( text )
+  text.lines.map do |line|
+    next if line.match(/^\s*$|#/)
+    line.strip.split(/\s*,\s*/, -1)
+  end.compact.map do |cells|
+    cells.map do |cell|
+      cell.match(/"(.*)"/) ? $1 : cell
+    end
+  end
+end
+end
 
 #
 # A solution using FSM (Finite State Machine)
 #  by Paul Sonkoly
-#    see https://www.reddit.com/r/ruby/comments/9sbbt3/ruby_quiz_is_back_a_fortnightly_programming/
 #
 # note: waiting for mealy gem to get published to rubygems
 #  source @ https://github.com/phaul/mealy
 
 module Paul
-  
+
+require 'mealy'
+
 class CSV
   include Mealy
 
@@ -81,7 +98,7 @@ class RubyQuizTest < MiniTest::Test
   end
 
   def txt
-<<TXT  
+<<TXT
 A,B,C,"D"
 # plain values
 a,b,c,d
@@ -111,6 +128,16 @@ class DaveTest < RubyQuizTest
   end # method test_parse
 end
 
+
+class FrankTest < RubyQuizTest
+  include Frank
+
+  def test_parse
+    assert_equal records, parse( txt )
+  end # method test_parse
+end
+
+
 class PaulTest < RubyQuizTest
   include Paul
 
@@ -118,4 +145,3 @@ class PaulTest < RubyQuizTest
     assert_equal records, parse( txt )
   end # method test_parse
 end
-
