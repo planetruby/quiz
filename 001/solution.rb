@@ -40,7 +40,6 @@ end
 # A solution using FSM (Finite State Machine)
 #  by Paul Sonkoly
 #
-# note: waiting for mealy gem to get published to rubygems
 #  source @ https://github.com/phaul/mealy
 
 module Paul
