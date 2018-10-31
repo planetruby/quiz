@@ -1,5 +1,5 @@
 ###
-## note: use ruby ./test.rb to run test 
+## note: use ruby ./test.rb to run test
 
 
 
@@ -13,7 +13,7 @@ end
 
 class RubyQuizTest < MiniTest::Test
 
-  def test_parse
+  def test_parse    # level 1
 
     records = [["A", "B", "C", "D"],
               ["a", "b", "c", "d"],
@@ -43,4 +43,32 @@ a,b,c,d
 TXT
 
   end # method test_parse
+
+  def test_parse_level2
+    records = [["1", "Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""]]
+
+    assert_equal records, parse( <<TXT )
+1, "Hamlet says, ""Seems,"" madam! Nay it is; I know not ""seems."""
+TXT
+  end
+
+  def test_parse_level3
+    records = [["1", "Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""]]
+
+    assert_equal records, parse( <<TXT )
+1, "Hamlet says, \\"Seems,\\" madam! Nay it is; I know not \\"seems.\\""
+TXT
+  end
+
+
+  def test_parse_level4
+    records = [[1, "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"],
+               [2, 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."']]
+
+    assert_equal records, parse( <<TXT )
+1, "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"
+2, 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."'
+TXT
+end
+
 end # class RubyQuizTest
