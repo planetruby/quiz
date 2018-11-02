@@ -40,6 +40,8 @@ Scrap the standings table (as an array of array of string values) e.g.:
 ```
 
 from the html table that you can find inside the web page's source.
+
+
 To qualify for solving the code challenge / puzzle you must pass the test:
 
 ``` ruby
