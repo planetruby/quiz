@@ -2,7 +2,7 @@
 
 
 Let's use the English Premier League (EPL) Standings Table
-from the BBC web page [`bbc.com/sport/football/premier-league/table`](https://www.bbc.com/sport/football/premier-league/table).
+from the BBC web page ([`bbc.com/sport/football/premier-league/table`](https://www.bbc.com/sport/football/premier-league/table)).
 
 
 The challenge: Code a parse method that passes the RubyQuizTest :-).
