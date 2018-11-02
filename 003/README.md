@@ -1,8 +1,8 @@
-# Ruby Quiz - Challenge #3 - Read the English Premier League (EPL) Standings Table from the BBC Web Page
+# Ruby Quiz - Challenge #3 - Read the English Premier League (EPL) Standings Table from a Web Page
 
 
-Let's use the English Premier League (EPL) Standings Table
-from the BBC web page ([`bbc.com/sport/football/premier-league/table`](https://www.bbc.com/sport/football/premier-league/table)).
+Let's read the English Premier League (EPL) Standings Table
+from a web page. Let's use the British Broadcasting Corp (BBC) page @ [`bbc.com/sport/football/premier-league/table`](https://www.bbc.com/sport/football/premier-league/table) as a start.
 
 
 The challenge: Code a parse method that passes the RubyQuizTest :-).
@@ -39,9 +39,7 @@ Scrap the standings table (as an array of array of string values) e.g.:
  ["20", "Huddersfield", "10", "0", "3", "7", "4", "21", "-17", "3"]]
 ```
 
-from the html table that you can find inside the web page source.
-
-
+from the html table that you can find inside the web page's source.
 To qualify for solving the code challenge / puzzle you must pass the test:
 
 ``` ruby
