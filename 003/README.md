@@ -37,6 +37,7 @@ Scrap the standings table (as an array of array of string values) e.g.:
  ["18", "Fulham", "10", "1", "2", "7", "11", "28", "-17", "5"],
  ["19", "Newcastle", "10", "0", "3", "7", "6", "14", "-8", "3"],
  ["20", "Huddersfield", "10", "0", "3", "7", "4", "21", "-17", "3"]]```
+```
 
 from the html table that you can find inside the web page's source.
 
