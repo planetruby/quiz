@@ -127,8 +127,8 @@ And the test reads:
 
 ``` ruby
 def test_parse_level4
-  records = [[1, "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"],
-             [2, 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."']]
+  records = [["1", "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"],
+             ["2", 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."']]
 
   assert_equal records, parse( <<TXT )
 1, "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"

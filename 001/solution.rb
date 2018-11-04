@@ -24,6 +24,7 @@ end
 #    see https://rubytalk.org/t/re-ruby-quiz-is-back-challenge-1-read-comma-separated-values-csv-from-the-real-world/74809
 
 module Frank
+module V1
 def parse( text )
   text.lines.map do |line|
     next if line.match(/^\s*$|#/)
@@ -34,7 +35,39 @@ def parse( text )
     end
   end
 end
+end  # module V1
+
+module V2
+##
+## see https://rubytalk.org/t/ruby-quiz-1-bonus-three-more-difficulty-levels-2-3-4-commas-inside-quotes-and-double-up-quotes-in-quotes/74816/2
+
+def parse( text )
+      text.lines.map do |line|
+        next if line.match(/^\s*$|#/)
+        line
+        .strip
+        .gsub(/"(([^"\\]|"")*(\\.([^"\\]|"")*)*)"|\'([^\'\\]*(\\.[^\'\\]*)*)\'/){
+          "\000#{
+            Regexp.last_match
+            .to_a[1..-1]
+            .compact[0]
+            .gsub(/,/, "\001")
+            .gsub(/\\"|""/, '"')
+          }\000"
+        }
+        .split(/\s*,\s*/, -1)
+      end.compact.map do |cells|
+        cells.map do |cell|
+          cell
+          .gsub(/\001/, ',')
+          .gsub(/\000/, '')
+        end
+      end
 end
+end  # module V2
+end  # module Frank
+
+
 
 #
 # A solution using FSM (Finite State Machine)
@@ -116,6 +149,42 @@ a,b,c,d
 # EOF on next line
 TXT
 end
+
+
+  def records_level2
+     [["1", "Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""]]
+  end
+
+  def txt_level2
+  <<TXT
+1, "Hamlet says, ""Seems,"" madam! Nay it is; I know not ""seems."""
+TXT
+  end
+
+  def records_level3
+     [["1", "Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""]]
+  end
+
+  def txt_level3
+  <<TXT
+1, "Hamlet says, \\"Seems,\\" madam! Nay it is; I know not \\"seems.\\""
+TXT
+end
+
+  def records_level4
+     [["1", "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"],
+      ["2", 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."']]
+  end
+
+  def txt_level4
+  <<TXT
+1, "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"
+2, 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."'
+TXT
+end
+
+
+
 end # class RubyQuizTest
 
 
@@ -128,13 +197,23 @@ class DaveTest < RubyQuizTest
 end
 
 
-class FrankTest < RubyQuizTest
-  include Frank
+class FrankTestV1 < RubyQuizTest
+  include Frank::V1
 
   def test_parse
     assert_equal records, parse( txt )
   end # method test_parse
 end
+
+class FrankTestV2 < RubyQuizTest
+  include Frank::V2
+
+  def test_parse()         assert_equal records, parse( txt ); end
+  def test_parse_level2()  assert_equal records_level2, parse( txt_level2 ); end
+  def test_parse_level3()  assert_equal records_level3, parse( txt_level3 ); end
+  def test_parse_level4()  assert_equal records_level4, parse( txt_level4 ); end
+end
+
 
 
 class PaulTest < RubyQuizTest
