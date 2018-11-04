@@ -5,7 +5,7 @@
 
 
 
-### Crypto Mining - Find the the Winning Lucky Number - Nonce (=Number used ONCE) for the Proof-of-Work (PoW) Hash (SHA-256)
+### Crypto Mining - Find the Winning Lucky Number - Nonce (=Number used ONCE) for the Proof-of-Work (PoW) Hash (SHA-256)
 
 
 
