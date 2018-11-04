@@ -119,7 +119,10 @@ end
 
 class RubyQuizTest < MiniTest::Test
 
-  def records
+  RECORDS = {}
+  TXT =     {}
+
+  RECORDS[:level1]=
 [["A", "B", "C", "D"],
               ["a", "b", "c", "d"],
               ["e", "f", "g", "h"],
@@ -127,10 +130,7 @@ class RubyQuizTest < MiniTest::Test
               ["", "", "", ""],
               ["", "", "", ""]]
 
-  end
-
-  def txt
-<<TXT
+  TXT[:level1]=<<TXT
 A,B,C,"D"
 # plain values
 a,b,c,d
@@ -148,42 +148,34 @@ a,b,c,d
 
 # EOF on next line
 TXT
-end
 
 
-  def records_level2
+  RECORDS[:level2]=
      [["1", "Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""]]
-  end
 
-  def txt_level2
-  <<TXT
+  TXT[:level2]=<<TXT
 1, "Hamlet says, ""Seems,"" madam! Nay it is; I know not ""seems."""
 TXT
-  end
 
-  def records_level3
+  RECORDS[:level3]=
      [["1", "Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""]]
-  end
 
-  def txt_level3
-  <<TXT
+  TXT[:level3]=<<TXT
 1, "Hamlet says, \\"Seems,\\" madam! Nay it is; I know not \\"seems.\\""
 TXT
-end
 
-  def records_level4
+  RECORDS[:level4]=
      [["1", "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"],
       ["2", 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."']]
-  end
 
-  def txt_level4
-  <<TXT
+  TXT[:level4]=<<TXT
 1, "Hamlet says, 'Seems,' madam! Nay it is; I know not 'seems.'"
 2, 'Hamlet says, "Seems," madam! Nay it is; I know not "seems."'
 TXT
-end
 
 
+  def records() RECORDS[:level1]; end
+  def txt()     TXT[:level1]; end
 
 end # class RubyQuizTest
 
@@ -191,27 +183,23 @@ end # class RubyQuizTest
 class DaveTest < RubyQuizTest
   include Dave
 
-  def test_parse
-    assert_equal records, parse( txt )
-  end # method test_parse
+  def test_parse()   assert_equal records, parse( txt ); end
 end
 
 
 class FrankTestV1 < RubyQuizTest
   include Frank::V1
 
-  def test_parse
-    assert_equal records, parse( txt )
-  end # method test_parse
+  def test_parse()   assert_equal records, parse( txt ); end
 end
 
 class FrankTestV2 < RubyQuizTest
   include Frank::V2
 
   def test_parse()         assert_equal records, parse( txt ); end
-  def test_parse_level2()  assert_equal records_level2, parse( txt_level2 ); end
-  def test_parse_level3()  assert_equal records_level3, parse( txt_level3 ); end
-  def test_parse_level4()  assert_equal records_level4, parse( txt_level4 ); end
+  def test_parse_level2()  assert_equal RECORDS[:level2], parse( TXT[:level2] ); end
+  def test_parse_level3()  assert_equal RECORDS[:level3], parse( TXT[:level3] ); end
+  def test_parse_level4()  assert_equal RECORDS[:level4], parse( TXT[:level4] ); end
 end
 
 
@@ -219,7 +207,5 @@ end
 class PaulTest < RubyQuizTest
   include Paul
 
-  def test_parse
-    assert_equal records, parse( txt )
-  end # method test_parse
+  def test_parse()   assert_equal records, parse( txt ); end
 end

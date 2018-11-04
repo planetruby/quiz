@@ -98,15 +98,11 @@ end # class RubyQuizTest
 class FrankTestV1 < RubyQuizTest
   include Frank::V1
 
-  def test_parse
-    assert_equal table, parse( html )
-  end
+  def test_parse()   assert_equal table, parse( html ); end
 end
 
 class FrankTestV2 < RubyQuizTest
   include Frank::V2
 
-  def test_parse
-    assert_equal table, parse( html )
-  end
+  def test_parse()   assert_equal table, parse( html ); end
 end
