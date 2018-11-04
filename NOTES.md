@@ -20,6 +20,9 @@
 
 ### CSV Challenge - Humanitarian Exchange Language (HXL)
 
+see <https://github.com/csvspecs/csv-hxl>
+
+
 
 ### CSV Challenge - parse sample with CSV in CSV meta data block / front matter
 
