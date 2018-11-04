@@ -4,6 +4,12 @@
 ## More Quiz Ideas
 
 
+
+### Crypto Mining - Find the the Winning Lucky Number - Nonce (=Number used ONCE) for the Proof-of-Work (PoW) Hash (SHA-256)
+
+
+
+
 ### Type Inference - Convert String to Null, Boolean, Number, Not a Number (NaN), Date & Time, ...
 
 "2018", "20.18", "2018-12-25"
