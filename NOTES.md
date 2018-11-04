@@ -4,12 +4,15 @@
 ## More Quiz Ideas
 
 
-### Type Inference - Convert String to Null, Boolean, Number, Date & Time, ...
+### Type Inference - Convert String to Null, Boolean, Number, Not a Number (NaN), Date & Time, ...
 
 "2018", "20.18", "2018-12-25"
 
 
 ### CSV Challenge - use a Regex to Parse CSV
+
+
+### CSV Challenge - Humanitarian Exchange Language (HXL)
 
 
 ### CSV Challenge - parse sample with CSV in CSV meta data block / front matter
