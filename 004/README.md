@@ -58,9 +58,9 @@ into
 
 Bonus: For a greater level 2 challenge with three extra rules:
 
-- Skip / Ignore extra header rows (e.g. one or more rows before hashtag line)
-- Skip / Ignore "untagged" fields / columns in hashtag line (e.g. `""`)
-- Fold repeat (duplicate) columns (e.g. `#sex+#targeted`) into a list / array
+- Skip / ignore extra header rows (e.g. one or more rows before hashtag line / row)
+- Skip / ignore "untagged" fields / columns (e.g. `""`) in the hashtag line / row in the named tuple hash dictionary
+- Fold repeat (duplicate) fields / columns (e.g. `#sex+#targeted`) into a list / array
 
 
 Turn:
