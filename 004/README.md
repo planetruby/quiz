@@ -10,7 +10,7 @@ Aside: What's Humanitarian eXchange Language (HXL)?
 [Humanitarian eXchange Language (HXL)](https://github.com/csvspecs/csv-hxl)
 is a (meta data) convention for
 adding agreed on hashtags e.g. `#org,#country,#sex+#targeted,#adm1`
-inline in a (single new line)
+inline in a (single new line / row)
 between the last header row and the first data row
 for sharing tabular data across organisations
 (during a humanitarian crisis).
