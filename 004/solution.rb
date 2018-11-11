@@ -1,7 +1,3 @@
-###
-## note: use ruby ./test.rb to run test
-
-
 require 'minitest/autorun'
 
 
