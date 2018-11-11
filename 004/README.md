@@ -1,7 +1,7 @@
 # Ruby Quiz - Challenge #4 - Turn Humanitarian eXchange Language (HXL) Tabular Records into Named Tuples
 
-Let's turn tabular data using the Humanitarian eXchange Language (HXL) 
-hashtag convention from array of array of strings 
+Let's turn tabular data using the Humanitarian eXchange Language (HXL)
+hashtag convention from array of array of strings
 to array of named tuples (also known as hash dictionaries).
 
 
@@ -71,7 +71,7 @@ parse( [["What","","","Who","Where","For whom",""],
         ["","#sector+en","#subsector","#org","#country","#sex+#targeted","#sex+#targeted","#adm1"],
         ["001","WASH","Subsector 1","Org 1","Country 1","100","100","Region 1"],
         ["002","Health","Subsector 2","Org 2","Country 2","","","Region 2"],
-        ["003","Education","Subsector 3","Org 3","Country 2","250,300","Region 3"],
+        ["003","Education","Subsector 3","Org 3","Country 2","250","300","Region 3"],
         ["004","WASH","Subsector 4","Org 1","Country 3","80","95","Region 4"]] )
 ```
 
@@ -140,7 +140,7 @@ class RubyQuizTest < MiniTest::Test
         ["","#sector+en","#subsector","#org","#country","#sex+#targeted","#sex+#targeted","#adm1"],
         ["001","WASH","Subsector 1","Org 1","Country 1","100","100","Region 1"],
         ["002","Health","Subsector 2","Org 2","Country 2","","","Region 2"],
-        ["003","Education","Subsector 3","Org 3","Country 2","250,300","Region 3"],
+        ["003","Education","Subsector 3","Org 3","Country 2","250","300","Region 3"],
         ["004","WASH","Subsector 4","Org 1","Country 3","80","95","Region 4"]]
 
     recs_expected = [
@@ -179,4 +179,3 @@ that is, the [ruby-talk mailing list](https://rubytalk.org).
 
 
 Happy hacking and data wrangling with Ruby.
-
