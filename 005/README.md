@@ -10,8 +10,6 @@ for the proof-of-work (PoW) hash using SHA-256.
 
 Aside:  What's a (Crypto) Hash?
 
-Let's start with crypto hashes
-
 Classic Bitcoin uses the SHA256 hash algorithm. Let's try
 
 ```ruby
@@ -39,7 +37,7 @@ Digest::SHA256.hexdigest( 'Data Data Data Data' )
 
 Note: The resulting hash is always 256-bit in size
 or 64 hex(adecimal) chars (0-9,a-f) in length
-even if the input is less than 256-bit or much bigger than 256-bit:
+even if the input is less than 256-bit or much bigger than 256-bit.
 
 
 Trivia Quiz: What's SHA256?
