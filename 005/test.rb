@@ -11,7 +11,7 @@ require 'digest'
 
 
 def compute_nonce( data )
-  # note:  data is a string e.g. "Hello, Crypto! The time is now >1541927781<."
+  # note:  data is a string e.g. "Hello, Crypto! The epoch time is now >1541927781<."
   # ...
   #  returns nonce (=Number used ONCE) as integer e.g. 26762 or 68419 etc.
 end
@@ -22,7 +22,7 @@ end
 class RubyQuizTest < MiniTest::Test
 
   def test_hash_with_proof_of_work
-    data  = "Hello, Crypto! The time is now >#{Time.now.to_i}<."
+    data  = "Hello, Crypto! The epoch time is now >#{Time.now.to_i}<."
 
     nonce = compute_nonce( data )
     hash = Digest::SHA256.hexdigest( "#{nonce}#{data}" )
