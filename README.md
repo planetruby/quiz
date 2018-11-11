@@ -7,6 +7,8 @@ Ruby Quiz is a  fortnightly programming challenge for Ruby programmers. A new Ru
 - [Challenge #2 - Calculate the Bitcoin Genesis Block Hash (SHA-256)](002) **OPEN**
 - [Challenge #3 - Read the English Premier League (EPL) Standings Table from a Web Page](003) **OPEN**
 - [Challenge #4 - Turn Humanitarian eXchange Language (HXL) Tabular Records into Named Tuples](004) **OPEN**
+- [Challenge #5 - Crypto Mining - Find the Winning Lucky Number - Nonce (=Number used ONCE) for the Proof-of-Work (PoW) Hash (SHA-256)](005) **OPEN**
+
 
 
 

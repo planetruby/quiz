@@ -4,7 +4,7 @@ Let's turn tabular data using the Humanitarian eXchange Language (HXL)
 hashtag convention from array of array of strings
 to array of named tuples (also known as hash dictionaries).
 
-
+---
 Aside: What's Humanitarian eXchange Language (HXL)?
 
 [Humanitarian eXchange Language (HXL)](https://github.com/csvspecs/csv-hxl)
@@ -25,6 +25,9 @@ Record,Sector/Cluster,Subsector,Organisation,Country,Males,Females,Subregion
 003,Education,Subsector 3,Org 3,Country 2,250,300,Region 3
 004,WASH,Subsector 4,Org 1,Country 3,80,95,Region 4
 ```
+
+---
+
 
 
 The challenge: Code a parse method that passes the RubyQuizTest :-).
