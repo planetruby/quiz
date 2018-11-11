@@ -69,7 +69,7 @@ hash = Digest::SHA256.hexdigest( "#{nonce}#{data}" )
 assert hash.start_with?( "0000" )
 ```
 
-Note: `data` is a (random) string e.g. `"Hello, Crypto! The time is now >1541927781<."`
+Note: `data` is a (random) string e.g. `"Hello, Crypto! The epoch time is now >1541927781<."`
 and `compute_nonce` is expected to return
 the nonce (=Number used ONCE) as an integer number e.g. `26762` or `68419` etc.
 
@@ -90,7 +90,7 @@ require 'digest'
 class RubyQuizTest < MiniTest::Test
 
   def test_hash_with_proof_of_work
-    data  = "Hello, Crypto! The time is now >#{Time.now.to_i}<."
+    data  = "Hello, Crypto! The epoch time is now >#{Time.now.to_i}<."
 
     nonce = compute_nonce( data )
     hash = Digest::SHA256.hexdigest( "#{nonce}#{data}" )
