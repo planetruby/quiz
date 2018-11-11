@@ -123,4 +123,7 @@ and four zeros (`0000`) would be 16^4 = 65 536 and so on.
 ---
 
 
-Happy crypto mining and hashing with ruby.
+Post your code snippets on the "official" Ruby Quiz Channel,
+that is, the [ruby-talk mailing list](https://rubytalk.org).
+
+Happy crypto mining and hashing with Ruby.
