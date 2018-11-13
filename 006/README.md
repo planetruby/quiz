@@ -29,10 +29,7 @@ end
 ```
 
 For the starter level 1 build the table of contents (toc)
-for the [ruby meetups in europe document / page](https://github.com/planetruby/calendar/blob/master/meetups/EUROPE.md) in text with markdown formatting conventions.
-Example (Note: All text stripped for clarity, that is,
-making it clear to see the heading hierarchy / tree structure):
-
+for the [ruby meetups in europe document / page](https://github.com/planetruby/calendar/blob/master/meetups/EUROPE.md) in text with markdown formatting conventions. Turn:
 
 ``` md
 ## Europe
@@ -69,10 +66,14 @@ making it clear to see the heading hierarchy / tree structure):
 #### Bulgaria (bg)
 #### Romania / România (ro)
 #### Russia / Россия (ru)
-#### Ukraine / Україна / Украина (ua)
+#### Ukraine / Україна (ua)
 ```
 
-into
+(Note: All text stripped for clarity, that is,
+making it clear to see the heading hierarchy / tree structure of the page.)
+
+
+into:
 
 ``` ruby
 [[2, "Europe",
