@@ -29,7 +29,7 @@ end
 ```
 
 For the starter level 1 build the table of contents (toc)
-for the [ruby meetups in europe document / page](https://github.com/planetruby/calendar/blob/master/meetups/EUROPE.md) in text with markdown formatting conventions. Turn:
+for the [ruby meetups in europe document / page](https://github.com/planetruby/meetups/blob/master/EUROPE.md) in text with markdown formatting conventions. Turn:
 
 ``` md
 ## Europe
