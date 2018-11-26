@@ -7,7 +7,7 @@
 #  more about (ruby) inline @ https://github.com/seattlerb/rubyinline
 
 module Frank
-  def compute_nonce(data)
+  def compute_nonce( data )
     0.upto(Float::INFINITY) do |nonce|
       break nonce if sha256("#{nonce}#{data}", 2)==0
     end
@@ -35,11 +35,13 @@ end
 #   by Gerald Bauer
 
 module Test
-  def compute_nonce(data)
+  def compute_nonce( data )
     nonce = 0
     loop do
       hash = Digest::SHA256.hexdigest( "#{nonce}#{data}" )
-      return nonce  if hash.start_with?( "0000" )
+      break  if hash.start_with?( "0000" )  # bingo!
+      nonce += 1                            # keep trying and trying ...
     end
+    nonce
   end
 end # module Test
