@@ -27,3 +27,19 @@ module Frank
     END
   end
 end
+
+
+
+##
+#  Test entry
+#   by Gerald Bauer
+
+module Test
+  def compute_nonce(data)
+    nonce = 0
+    loop do
+      hash = Digest::SHA256.hexdigest( "#{nonce}#{data}" )
+      return nonce  if hash.start_with?( "0000" )
+    end
+  end
+end # module Test
