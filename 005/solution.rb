@@ -34,7 +34,7 @@ end
 #  Test entry
 #   by Gerald Bauer
 
-module Test
+module TestAnswer
   def compute_nonce( data )
     nonce = 0
     loop do
@@ -44,4 +44,4 @@ module Test
     end
     nonce
   end
-end # module Test
+end
