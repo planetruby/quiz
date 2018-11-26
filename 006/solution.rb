@@ -105,15 +105,12 @@ def toc( txt )
   txt.each_line do |line|
     line = line.chomp( '' )
 
-    pp line
     if (m=HEADING_RX.match(line))
 
       level = m[:level].size
-      level_str = m[:level]
       title = m[:title]
 
-      puts " level: (#{level}) >#{level_str}<"
-      puts " title: >#{title}<"
+      puts " heading: (#{level}) >#{title}<"
 
       item = [level,title]
 
