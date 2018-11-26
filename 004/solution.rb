@@ -34,6 +34,21 @@ def parse(recs)
 end # module Frank
 
 
+#
+# Test entry
+#   by Gerald Bauer
+
+module TestAnswer
+
+ require 'csvhuman'
+    
+ ## todo: set (builtin/default) type converter to :none
+ def parse(recs) CsvHuman.parse( recs ); end
+    
+end # module TestAnswer
+
+
+
 class RubyQuizTest < MiniTest::Test
 
   def recs1
@@ -94,6 +109,14 @@ end # class RubyQuizTest
 
 class FrankTest < RubyQuizTest
   include Frank
+
+  def test_level1()   assert_equal recs1_expected, parse( recs1 ); end
+  def test_level2()   assert_equal recs2_expected, parse( recs2 ); end
+end
+
+
+class TestAnswerTest < RubyQuizTest
+  include TestAnswer
 
   def test_level1()   assert_equal recs1_expected, parse( recs1 ); end
   def test_level2()   assert_equal recs2_expected, parse( recs2 ); end
