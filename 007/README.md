@@ -20,14 +20,14 @@ For the starter level 1 turn a random list of strings:
 
 into a properly typed list of values:
 
-```
+``` ruby
 [2018, 2018.12, #<Date: 2018-12-25>, "25 Gems", NaN, 1820, 18.2, nil, nil]
 ```
 
 Note: `NaN` is short for Not a Number (that is, `Float::NAN`).
 To pass the RubyQuizTest all type classes must match too, that is:
 
-```
+``` ruby
 [Integer, Float, Date, String, Float, Integer, Float, NilClass, NilClass]
 ```
 
