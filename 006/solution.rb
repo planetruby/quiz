@@ -86,8 +86,8 @@ end # module Frank
 # Test entry
 #   by Gerald Bauer
 
-module Test
-##
+module TestAnswer
+
 HEADING_RX = /^
               \s*
               (?<level>\#+)
@@ -146,7 +146,7 @@ def toc( txt )
 
   headings
 end
-end # module Test
+end 
 
 
 
@@ -213,8 +213,8 @@ class FrankV2Test < RubyQuizTest
   end
 end
 
-class TestTest < RubyQuizTest
-  include Test
+class TestAnswerTest < RubyQuizTest
+  include TestAnswer
 
   def test_toc
     assert_equal headings, toc( txt )
