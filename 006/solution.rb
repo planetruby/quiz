@@ -114,23 +114,20 @@ def toc( txt )
 
       item = [level,title]
 
-      if stack.empty? # root - let's start
+      if stack.empty?   # root - let's start
          headings << item
          stack.push( headings )
          parent = item
       else
         parent_level = parent[0]
         level_diff = level - parent_level
-        if level_diff > 0
-          ## up
+        if level_diff > 0        ## up
           puts " up +#{level_diff}"
-        elsif level_diff < 0
-          ## down
+        elsif level_diff < 0     ## down
           puts " down #{level_diff}"
           level_diff.abs.times { stack.pop }
           parent = stack.pop
-        else
-          ## same level
+        else                     ## same level
           parent = stack.pop
         end
         parent[2] ||= []
