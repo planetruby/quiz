@@ -178,7 +178,7 @@ Happy data wrangling and genome genetics bits & bytes slicing with Ruby.
 
 
 
-PS: Using a genes (12 x 4) / traits chart
+PS: Using a genes / traits chart
 you can now decipher the genome:
 
 Fur (0-3) • Pattern (4-7) • Eye Color (8-11) • Eye Shape (12-15) • Base Color (16-19) • Highlight Color (20-23) • Accent Color (24-27) • Wild (28-31) • Mouth (32-35) • Environment (36-39) • Secret Y Gene (40-43) • Purrstige (44-47)
