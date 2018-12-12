@@ -4,11 +4,11 @@
 
 module Delton
 
-def kai_encode(num)
+def kai_encode( num )
   num.to_s(2).rjust(240, '0').scan(/.{5}/).map {|n| '123456789abcdefghijklmnopqrstuvwx'[n.to_i(2)]}.join
 end
 
-def kai_fmt(kai)
+def kai_fmt( kai )
   kai.scan(/.{4}/).join(' ')
 end
 
