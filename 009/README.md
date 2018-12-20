@@ -14,8 +14,8 @@ end
 ```
 
 Start from scratch or, yes, use any library / gem you can find.
-From the matches passed in (as an array of array of string values)
-read in from the 2018/19 season dataset e.g.:
+From the matches read in from the 2018/19 season dataset and passed along (as an array of array of string values)
+e.g.:
 
 ``` ruby
 [["Manchester United FC", "2-1", "Leicester City FC"],
