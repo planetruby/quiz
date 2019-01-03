@@ -64,8 +64,8 @@ def mixGenes(mGenes[48], sGenes[48], babyGenes[48]):
     mutation = 0
     # CHECK MUTATION
     if i % 4 == 0:
-      gene1 = mGene[i]
-      gene2 = sGene[i]
+      gene1 = mGenes[i]
+      gene2 = sGenes[i]
       if gene1 > gene2:
         gene1, gene2 = gene2, gene1
       if (gene2 - gene1) == 1 and iseven(gene1):
@@ -77,12 +77,12 @@ def mixGenes(mGenes[48], sGenes[48], babyGenes[48]):
 
     # GIVE BABY GENES
     if mutation:
-      baby[i] = mutation
+      babyGenes[i] = mutation
     else:
       if random() < 0.5:
-        babyGenes[i] = mGene[i]
+        babyGenes[i] = mGenes[i]
       else:
-        babyGenes[i] = sGene[i]
+        babyGenes[i] = sGenes[i]
 ```
 
 Yes, that's better (but not quite ruby-esque).
