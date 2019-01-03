@@ -9,8 +9,8 @@ The bad news is all CryptoKitties contracts are open source
 EXCEPT the "magic" sooper-sekret gene mixing operation formula in the GeneSciene contract.
 You can find the byte code in the contract at
 [`etherscan.io/address/0xf97e0a5b616dffc913e72455fde9ea8bbe946a2b#code`](https://etherscan.io/address/0xf97e0a5b616dffc913e72455fde9ea8bbe946a2b#code).
-If you click on "Switch to Opcode" you will see
-almost endless to-the-metal stack machine byte code
+If you click on "Switch to Opcode" you will see an
+almost endless stream of to-the-metal stack machine byte code
 instructions:
 
 ```
