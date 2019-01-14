@@ -1,20 +1,20 @@
-# Ruby Quiz - Challenge #8 - Base32 Alphabet - Convert the Super "Sekretoooo" 240-Bit CryptoKitties Genome to Kai Notation - Annipurrsary!
+# Ruby Quiz - Challenge #8 - Base32 Alphabet - Convert the Super "Sekretoooo" 256-Bit CryptoKitties Genome to Kai Notation - Annipurrsary!
 
 
 Annipurrsary! Let's celebrate one year of CryptoKitties -
 yes, more than one million cute little cartoon cats on the blockchain.
 
-Let's convert the super "sekretoooo" kitty genome - that is, a 240-bit integer number
+Let's convert the super "sekretoooo" kitty genome - that is, a 256-bit integer number
 where every 5-bit block is a gene - into the base32 (2^5=32) kai notation.
 
 
 Q: What's base32 kai notation?
 
 Kai notation (named to honor [Kai Turner](https://medium.com/@kaigani/the-cryptokitties-genome-project-on-dominance-inheritance-and-mutation-b73059dcd0a4) who deciphered the kitties genome)
-is a base58 variant / subset for decoding the 240-bit integer into 5-bit blocks.
+is a base58 variant / subset for decoding the 256-bit integer into 5-bit blocks.
 Each 5-bit block is a gene with 32 possible traits.
 The 240-bit genome breaks down into 12 groups of 4 (x 5-bit) genes
-(that is, 12 x 4 x 5-bit = 240 bits)
+(that is, 12 x 4 x 5-bit = 240 bits) with the remaining leading 16 bits "unused" and zeroed-out (e.g. `0x0000`).
 Example:
 
 |Kai    |Binary |Num|Kai    |Binary |Num|Kai    |Binary |Num|Kai    |Binary |Num|
@@ -44,10 +44,10 @@ Let's get coding, for an example:
 
 ``` ruby
 
-# A 240-bit super "sekretoooo" integer genome
+# A 256-bit super "sekretoooo" integer genome
 
 # hexadecimal (base 16)
-genome = 0x4a52931ce4085c14bdce014a0318846a0c808c60294a6314a34a1295b9ce
+genome = 0x00004a52931ce4085c14bdce014a0318846a0c808c60294a6314a34a1295b9ce
 # decimal (base 10)
 genome = 512955438081049600613224346938352058409509756310147795204209859701881294
 # binary (base 2)
@@ -69,20 +69,6 @@ p genome.to_s(16)
 p genome.to_s(2)
 # => "10010100101001010010011000111001110010000001000010111000001010010111101110011100000000101001010000000110001100010000100\
 #     011010100000110010000000100011000110000000101001010010100110001100010100101000110100101000010010100101011011100111001110"
-
-bin = '%0240b' % genome     # note: adds leading zeros - to_s(2) does not
-p bin.size
-# => 240
-p bin
-# => "010010100101001010010011000111001110010000001000010111000001010010111101110011100000000101001010000000110001100010000100\
-#     011010100000110010000000100011000110000000101001010010100110001100010100101000110100101000010010100101011011100111001110"
-
-hex = '%060x' % genome     # note: adds leading zeros - to_s(16) does not
-p hex.size
-# => 60
-p hex
-# => 60
-# => "4a52931ce4085c14bdce014a0318846a0c808c60294a6314a34a1295b9ce"
 ```
 
 And finally:
