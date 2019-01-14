@@ -13,7 +13,7 @@ Q: What's base32 kai notation?
 Kai notation (named to honor [Kai Turner](https://medium.com/@kaigani/the-cryptokitties-genome-project-on-dominance-inheritance-and-mutation-b73059dcd0a4) who deciphered the kitties genome)
 is a base58 variant / subset for decoding the 256-bit integer into 5-bit blocks.
 Each 5-bit block is a gene with 32 possible traits.
-The 240-bit genome breaks down into 12 groups of 4 (x 5-bit) genes
+The 256-bit genome breaks down into 12 groups of 4 (x 5-bit) genes
 (that is, 12 x 4 x 5-bit = 240 bits) with the remaining leading 16 bits "unused" and zeroed-out (e.g. `0x0000`).
 Example:
 
@@ -90,7 +90,7 @@ end
 ```
 
 For the starter level 1 turn
-super "sekretoooo" kitty genome 240-bit integer numbers
+super "sekretoooo" kitty genome 256-bit integer numbers
 into base 32 (2^5) kai notation.
 
 For the bonus level 2 pretty print and format
