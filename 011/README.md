@@ -3,7 +3,7 @@
 Ethereum - the decentralized "world computer" -
 lets you store and run your own (contract) code on the blockchain.
 
-Remember the
+Remember
 the "magic" sooper-sekret gene mixing operation formula
 in the CryptoKitties GeneSciene contract?
 
@@ -304,4 +304,4 @@ end # class RubyQuizTest
 Post your code snippets on the "official" Ruby Quiz Channel,
 that is, the [ruby-talk mailing list](https://rubytalk.org).
 
-Happy hacking and blockchain contract bytecode assembling & disassembling with Ruby.
+Happy opscode hacking and blockchain contract bytecode assembling & disassembling with Ruby.
