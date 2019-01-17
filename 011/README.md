@@ -204,7 +204,7 @@ The `PUSH29` instruction places the following 29-bytes on the stack
 (e.g. disassemble to `PUSH29 0x0100000000000000000000000000000000000000000000000000000000
 `) and so on.
 
-If interested read more about the Ethereum Virtual Machine (EVM)
+TIP: If interested read more about the Ethereum Virtual Machine (EVM)
 and the opcodes / bytcodes in
 the (free online) ["The Ethereum Virtual Machine"](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc) chapter
 in the Mastering Ethereum book by Andreas M. Antonopoulos and Gavin Wood.
