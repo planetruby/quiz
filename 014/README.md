@@ -7,6 +7,7 @@ First let's warm-up with the simplest possible lottery contract
 from the book "[Building Games with Ethereum Smart Contracts](https://www.apress.com/book/9781484234914)"
 by Kedar Iyer and Chris Dannen.
 
+
 ``` solidity
 contract SimpleLottery {
     uint public constant TICKET_PRICE = 1e16; // 0.01 ether
