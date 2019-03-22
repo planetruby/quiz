@@ -2,14 +2,15 @@
 # Tic Tac Toe Player vs Player Game Contract
 
 
-Winner = Enum.new( :none, :draw, :host, :challenger )
+enum :Winner, :none, :draw, :host, :challenger
 
-Game = Struct.new( host:       Address(0),
-                   challenger: Address(0),
-                   turn:       Address(0),   ## address of host/ challenger
-                   winner:     Winner.none,
-                   board:      Array.of( Integer, 3*3 )
-                 )
+struct :Game,
+  host:       Address(0),
+  challenger: Address(0),
+  turn:       Address(0),   ## address of host/ challenger
+  winner:     Winner.none,
+  board:      Array.of( Integer, 3*3 )
+
 
 def setup
   @games = Mapping.of( Address => Mapping.of( Address => Game ))
@@ -23,7 +24,7 @@ def create( challenger, host )    ## Create a new game
   ## Check if game already exists
   existing_host_games = @games[ host ]
   game = existing_host_games[ challenger ]
-  assert game != Game.zero, "game already exists"
+  assert game == Game.zero, "game already exists"
 
   game.challenger = challenger
   game.host       = host
@@ -37,7 +38,7 @@ def restart( challenger, host, by )  ## Restart a game
   ## Check if game exists
   existing_host_games = @games[ host ]
   game = existing_host_games[ challenger ]
-  assert game == Game.zero, "game doesn't exists"
+  assert game != Game.zero, "game doesn't exists"
 
   ## Check if this game belongs to the action sender
   assert by == game.host || by == game.challenger, "this is not your game!"
@@ -55,7 +56,7 @@ def close( challenger, host ) ## Close an existing game, and remove it from stor
   ## Check if game exists
   existing_host_games = @games[ host ]
   game = existing_host_games[ challenger ]
-  assert game == Game.zero, "game doesn't exists"
+  assert game != Game.zero, "game doesn't exists"
 
   ## Remove game
   existing_host_games.delete( challenger )
@@ -68,7 +69,7 @@ def move( challenger, host, by, row, column ) ## Make movement
   ##  Check if game exists
   existing_host_games = @games[ host ]
   game = existing_host_games[ challenger ]
-  assert game == Game.zero, "game doesn't exists"
+  assert game != Game.zero, "game doesn't exists"
 
   ## Check if this game hasn't ended yet
   assert game.winner.none?, "the game has ended!"
@@ -124,7 +125,7 @@ def calc_winner( board )
   end
   ## check for board full
   board.each do |cell|
-    if is_cell_empty?( cell )
+    if is_empty_cell?( cell )
       return Winner.none    # game in-progress; keep playing
     end
   end
