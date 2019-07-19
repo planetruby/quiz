@@ -8,6 +8,11 @@ Let's follow the steps from
 the Bitcoin Wiki article
 titled ["How to create Bitcoin Address"](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses#How_to_create_Bitcoin_Address):
 
+
+![](i/bitcoin-pubkey-to-addr.png)
+
+
+
 Step 0 - Having a private Elliptic Curve Digital Signature Algorith (ECDSA) key
 
     18e14a7b6a307f426a94f8114701e7c8e774e7f9a47e2c2035db29a206321725
