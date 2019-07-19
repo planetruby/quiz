@@ -22,6 +22,9 @@ Ruby Quiz is a  fortnightly programming challenge for Ruby programmers. A new Ru
 - [Challenge #13 - Create a PonzICO Investment Contract - Blockchain Performance Art](013)
 - [Challenge #14 - Powerball Mega Millions Grand Prize - Create a Power Play Contract for America's Most Popular Lottery](014)
 
+Back to Classic Edition
+
+- [Challenge #15 - Generate the Bitcoin (Base58) Address from the (Elliptic Curve) Public Key](015)
 
 
 
