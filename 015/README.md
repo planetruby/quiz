@@ -94,7 +94,7 @@ class RubyQuizTest < MiniTest::Test
     pkh = pk_to_pkh( pubkey )
     assert_equal 'f54a5851e9372b87810a8e60cdd2e7cfd80b6e31', pkh
 
-    prefix = "00"    ## version prefix
+    prefix = '00'    ## version prefix
     h = checksum( prefix + pkh )
     assert_equal 'c7f18fe8fcbed6396741e58ad259b5cb16b7fd7f041904147ba1dcffabf747fd', h
     assert_equal 'c7f18fe8', h[0..7]
