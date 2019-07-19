@@ -13,7 +13,7 @@ titled ["How to create Bitcoin Address"](https://en.bitcoin.it/wiki/Technical_ba
 
 
 
-Step 0 - Having a private Elliptic Curve Digital Signature Algorith (ECDSA) key
+Step 0 - Having a private Elliptic Curve Digital Signature Algorithm (ECDSA) key
 
     18e14a7b6a307f426a94f8114701e7c8e774e7f9a47e2c2035db29a206321725
 
@@ -59,22 +59,30 @@ That's it.
 
 
 The challenge: Code a
-`pk_to_pkh` (public key to public key hash),
-a `checksum` and  a `base58`
+`hash160` (public key to public key hash),
+a `hash256` (double sha-256 hash function), `checksum` and  a `base58`
 method that together return the classic Bitcoin address.
 Start from scratch or, yes, use any library / gem you can find.
 
 
 ``` ruby
-def pk_to_pkh( pubkey )
+def hash160( pubkey )   # public key to public key hash
+  #  step 2 - perform SHA-256 hashing
+  #  step 3 - perform RIPEMD-160 hashing on the result of SHA-256
   # ...
 end
 
-def checksum( data )
-  # ...
+def hash256( hex )      # double sha-256 hash
+  #  step 5 - perform SHA-256 hash
+  #  step 6 - perform SHA-256 hash on the result of the previous SHA-256 hash
+  #  ...
 end
 
-def base58( data )
+def checksum( hex )
+   # ...
+end
+
+def base58( hex )
   # ...
 end
 ```
@@ -91,15 +99,16 @@ class RubyQuizTest < MiniTest::Test
   def test_addr
     pubkey = '0250863ad64a87ae8a2fe83c1af1a8403cb53f53e486d8511dad8a04887e5b2352'
 
-    pkh = pk_to_pkh( pubkey )
+    pkh = hash160( pubkey )
     assert_equal 'f54a5851e9372b87810a8e60cdd2e7cfd80b6e31', pkh
 
     prefix = '00'    ## version prefix
-    h = checksum( prefix + pkh )
-    assert_equal 'c7f18fe8fcbed6396741e58ad259b5cb16b7fd7f041904147ba1dcffabf747fd', h
-    assert_equal 'c7f18fe8', h[0..7]
+    assert_equal 'c7f18fe8fcbed6396741e58ad259b5cb16b7fd7f041904147ba1dcffabf747fd', hash256( prefix + pkh )
+    
+    check  = checksum( prefix + pkh )
+    assert_equal 'c7f18fe8', check
 
-    addr = base58( prefix + pkh + h[0..7] )
+    addr = base58( prefix + pkh + check )
     assert_equal '1PMycacnJaSqwwJqjawXBErnLsZ7RkXUAs', addr
   end # method test_addr
 end # class RubyQuizTest
@@ -109,3 +118,4 @@ Post your code snippets on the "official" Ruby Quiz Channel,
 that is, the [ruby-talk mailing list](https://rubytalk.org).
 
 Happy hacking and crypto hashing with Ruby.
+
