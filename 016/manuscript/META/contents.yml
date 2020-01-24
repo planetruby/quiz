@@ -1,0 +1,30 @@
+- title: "Hoe Developer's Guide"
+  sections:
+  - title: What is Hoe?
+  - title: A Brief History of Hoe
+  - title: Why Use Hoe?
+    sections:
+    - title: Projects, the DRY way
+    - title: Update all your projects in 1 easy step
+    - title: New projects in 1 easy step
+    - title: Run your tests in 1 easy step
+    - title: Releasing in 1 easy step
+    - title: Noticing a pattern yet?
+    - title: Extensibility
+  - title:  Creating a new Project
+    sections:
+    - title: From Scratch
+    - title: Using Sow Templates
+  - title: Work the Way You Want to Work
+  - title: Project Structure
+  - title: Extending Hoe with Plugins
+    sections:
+    - title: Using Hoe Plugins
+    - title: Popular Hoe Plugins
+    - title: Writing Hoe Plugins
+    - title: How Plugins Work
+  - title: "Questions & Counterpoints"
+    sections:
+    - title: Why should I maintain a Manifest.txt when I can just write a glob?
+    - title: Why not just write gemspecs?
+    - title: "What about (newgem|bones|echoe|joe|gemify|...)?"
