@@ -25,6 +25,7 @@ Ruby Quiz is a  fortnightly programming challenge for Ruby programmers. A new Ru
 Back to Classic Edition
 
 - [Challenge #15 - Generate the Bitcoin (Base58) Address from the (Elliptic Curve) Public Key](015)
+- [Challenge #16 - Build the Manuscripts Book Manifest for Documents in Markdown](016)
 
 
 
