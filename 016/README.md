@@ -44,7 +44,7 @@ end
 
 For the starter level 1 build up the Manuscripts book manifest
 in the YAML format
-for the [Hoe Developer's Guide - Build, Package and Publish Gems with Rake Tasks - Ready-to-Use Build Scripts by Ryan Davis et al](https://github.com/yukimotopress/gem-tasks) from the heading hierarchy in structed text in the markdown format. Turn:
+for the [Hoe Developer's Guide - Build, Package and Publish Gems with Rake Tasks - Ready-to-Use Build Scripts by Ryan Davis et al](https://github.com/yukimotopress/gem-tasks) from the heading hierarchy in structured text in the markdown format. Turn:
 
 ``` md
 # Hoe Developer's Guide
