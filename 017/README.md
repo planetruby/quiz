@@ -170,7 +170,7 @@ Resulting in:
 Note: For the test the xml document gets automatically
 reformatted
 and pretty printed in compact style with two-space indent
-so you do NOT have to worry about spaces, line breaks, quotes or indendation.
+so you do NOT have to worry about spaces, line breaks, quotes or indentation.
 Reformatted example:
 
 ``` xml
