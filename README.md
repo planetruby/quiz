@@ -26,7 +26,7 @@ Back to Classic Edition
 
 - [Challenge #15 - Generate the Bitcoin (Base58) Address from the (Elliptic Curve) Public Key](015)
 - [Challenge #16 - Build the Manuscripts Book Manifest for Documents in Markdown](016)
-
+- [Challenge #17 - Build an HTML Template Engine Like It's 1999](017)
 
 
 ### New to Ruby?
