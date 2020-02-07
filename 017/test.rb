@@ -1,7 +1,8 @@
-require 'minitest/autorun'
-
 require 'date'
 require 'rexml/document'
+
+require 'minitest/autorun'
+
 
 
 def merge( template, blogroll )
