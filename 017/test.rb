@@ -48,7 +48,6 @@ class RubyQuizTest < MiniTest::Test
 
       formatter = REXML::Formatters::Pretty.new( 2 )  # indent=2
       formatter.compact = true # This is the magic line that does what you need!
-      pretty_xml = formatter.write( d.root, "" )  # todo/checl: what's 2nd arg used for ??
-      pretty_xml
+      formatter.write( d.root, '' )
   end
 end
