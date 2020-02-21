@@ -1,6 +1,6 @@
 # Ruby Quiz - Challenge #18 - Up-to-Date? Version Check All Your Libraries
 
-Let's say you have a program
+Let's say you have a script
 that depends on many libraries / gem.
 How can you make sure the minimum version requirements
 are fulfilled?
