@@ -59,11 +59,9 @@ outdated = version_check(
 pp outdated
 ```
 
-Where the version check record entries are
-1) the name, 2) the minimum requirement and 3) the used version
+Where the version check record entries are 1) the name, 2) the minimum requirement and 3) the used version
 e.g. `Pluto::VERSION` will become at runtime `1.5.3` or something - depending
 on the installation / setup.
-
 
 If all libraries are up-to-date
 this will result in an empty outdated list / array:
