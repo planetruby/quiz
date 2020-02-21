@@ -5,7 +5,7 @@ that depends on many libraries / gem.
 How can you make sure the minimum version requirements
 are fulfilled?
 
-Example - If you run the pluto feed reader:
+Let's look at a real-world example. If you run the pluto feed reader using the about option:
 
     $ pluto about
 
