@@ -1,7 +1,7 @@
 # Ruby Quiz - Challenge #1 - Read Comma-Separated Values (CSV) from the "Real World"
 
 
-Let's use the [`test.csv`](https://github.com/apache/commons-csv/blob/master/src/test/resources/CSVFileParser/test.csv) file from Apache Commons CSV Reader.
+Let's use the [`test.csv`](https://github.com/apache/commons-csv/blob/master/src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv) file from Apache Commons CSV Reader.
 The challenge: Code a parse method that passes the RubyQuizTest :-).
 Start from scratch or, yes, use any library / gem you can find.
 
